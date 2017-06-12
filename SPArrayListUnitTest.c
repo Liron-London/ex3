@@ -33,16 +33,19 @@ static bool spArrayListBasicCopyTest() {
 }
 
 static bool spArrayListBasicRemoveTest() {
+
 	SPArrayList* list = spArrayListCreate(CAPACITY_SIZE);
 	ASSERT_TRUE(list!=NULL);
 	for (int i = 0; i < CAPACITY_SIZE; i++) {
 		ASSERT_TRUE(spArrayListAddFirst(list, i) == SP_ARRAY_LIST_SUCCESS);
 	}
 	ASSERT_TRUE(spArrayListSize(list) == CAPACITY_SIZE);
+
 	for (int i = 0; i < CAPACITY_SIZE; i++) {
 		ASSERT_TRUE(spArrayListRemoveFirst(list) == SP_ARRAY_LIST_SUCCESS);
 		ASSERT_TRUE(spArrayListSize(list) == CAPACITY_SIZE - i - 1);
 	}
+
 	ASSERT_TRUE(spArrayListIsEmpty(list));
 	spArrayListDestroy(list);
 	return true;

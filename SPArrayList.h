@@ -5,7 +5,7 @@
 /**
  * SPArrayList summary:
  *
- * A container that represents a fixed size linked list. The capcity of the list
+ * A container that represents a fixed size linked list. The capacity of the list
  * is specified at the creation. The container supports typical list
  * functionalities with the addition of random access as in arrays.
  * Upon insertion, if the maximum capacity is reached then an error message is

@@ -2,6 +2,7 @@
 #define SPFIARGAME_H_
 #include <stdbool.h>
 #include "SPArrayList.h"
+#include "SPFIARParser.h"
 
 /**
  * SPFIARGame Summary:
@@ -33,6 +34,8 @@ typedef struct sp_fiar_game_t {
 	char gameBoard[SP_FIAR_GAME_N_ROWS][SP_FIAR_GAME_N_COLUMNS];
 	int tops[SP_FIAR_GAME_N_COLUMNS];
 	char currentPlayer;
+	int historySize; // added
+	SPArrayList *turn_array; //added
 	//You May add any fields you like
 } SPFiarGame;
 
@@ -44,7 +47,6 @@ typedef enum sp_fiar_game_message_t {
 	SP_FIAR_GAME_INVALID_ARGUMENT,
 	SP_FIAR_GAME_NO_HISTORY,
 	SP_FIAR_GAME_SUCCESS,
-//You may add any message you like
 } SP_FIAR_GAME_MESSAGE;
 
 /**

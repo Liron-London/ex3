@@ -1,5 +1,6 @@
 #include "unit_test_util.h"
 #include "SPFIARParser.h"
+#include <stdlib.h>
 
 static bool spParserCheckIsInt() {
 	ASSERT_TRUE(spParserIsInt("1"));
